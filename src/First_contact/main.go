@@ -214,7 +214,7 @@ func main() {
 
 	//Structs y punteros
 
-	//
+	//Stringers: personalizar el output de Structs
 
 }
 
