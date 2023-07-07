@@ -215,7 +215,32 @@ func main() {
 	//Structs y punteros
 
 	//Stringers: personalizar el output de Structs
+	papelSize := 50
+	baconSize := &a
 
+	fmt.Println(papelSize, baconSize)
+	//Interfaces y listas de interfaces
+
+	// Que es la concurrencia?
+	//Primer contacto con las Goroutines(concurrencias con go)
+
+	fmt.Println("holanda")
+	go fmt.Println("Pedregulho") // usualmente no se utiliza, ya que son dificiles de mantener al largo plazo.
+	//en su lugar se utiliza los Channels
+
+	//CHANNELS.
+
+	Shannels := make(chan string, 1)
+
+	fmt.Println("World")
+	go say("Bye", Shannels)
+
+	fmt.Println(<-Shannels)
+}
+
+func say(text string, Shannels chan<- string) { // "<-" antes de "chan" sirve para indicar que recibe informacion, si es al reves(<- tiene que estar al otro lado de "chan") da informacion y no recibe.
+	Shannels <- text
+	// text <- Shannels(esto significa que da info y no recibe)
 }
 
 type car struct {
