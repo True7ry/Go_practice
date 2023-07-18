@@ -230,7 +230,7 @@ func main() {
 
 	//CHANNELS.
 
-	Shannels := make(chan string, 1)
+	Shannels := make(chan string, 1) // el numero significa cuantos datos maneja
 
 	fmt.Println("World")
 	go say("Bye", Shannels)

@@ -3,7 +3,9 @@ package main
 /*
 Al poner espacios entre los strings, se rompe. (ni idea de como arreglarlo).
 */
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var gbv string
